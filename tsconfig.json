@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2018", // or newer if your node.js version supports this
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "declaration": false,
+    "noFallthroughCasesInSwitch": true,
+    "composite": false,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2018",
+      "esnext.asynciterable"
+    ],
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "useUnknownInCatchVariables": false,
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "baseUrl": "./src",
+    // "types": ["node"],
+    "noEmitOnError": true,
+    "noEmit": false,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": [
+      "types",
+      "node_modules/@types"
+    ],
+    "paths": {
+      "*": [
+        "node_modules/*"
+      ]
+    }
+  },
+  "lib": [
+    "es2015"
+  ],
+  "include": [
+    "src/**/*",
+    "./typings/nodemailer/nodemailer.d.ts",
+    "./typings/nodemailer-express-handlebars/nodemailer-express-handlebars.d.ts"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/*.test.ts",
+    "**/dist/"
+  ]
+}
