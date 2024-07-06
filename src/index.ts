@@ -3,6 +3,8 @@ import express from "express";
 import cors from "cors";
 import httpServer from "http";
 import cookieParser from "cookie-parser";
+import logger from "./utils/logger";
+import allRoutes from "./routes";
 
 async function bootstrap() {
   // Init express
@@ -21,16 +23,11 @@ async function bootstrap() {
   app.use(express.json());
   app.use(cookieParser());
 
+  allRoutes(app);
   sHttpServer.listen(process.env.PORT, async () => {
-    console.log(`Server started on http://localhost:${process.env.PORT}`);
-    //run migrations..
-    // if ((process.env.MIGRATE as string) === "1") await migrate();
-    // //later...JWT
-    // //routes..
-    // routes(app);
+    logger.info(`Server started on http://localhost:${process.env.PORT}`);
 
-    // swaggerDocs(app);
-    console.log("Let's start!");
+    logger.info("Let's start!");
   });
 }
 bootstrap();
