@@ -1,15 +1,24 @@
 import express from "express";
-import UserService from "../services/user.service";
+import UserController from "../controllers/user.controller";
 import { validateRequest } from "../utils/middleware";
-import { signupValidationRules } from "../validations/user.validation";
+import {
+  signupValidationRules,
+  loginValidationRules,
+} from "../validations/user.validation";
 
 const router = express.Router();
-const userService = new UserService();
+const userController = new UserController();
 
 router.post(
   "/signup",
   validateRequest(signupValidationRules),
-  userService.signupUser
+  userController.signupUser
+);
+
+router.post(
+  "/login",
+  validateRequest(loginValidationRules),
+  userController.login
 );
 
 export default router;

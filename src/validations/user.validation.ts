@@ -1,7 +1,6 @@
 import { body } from "express-validator";
 
 export const signupValidationRules = [
-  body("username").notEmpty().withMessage("Username is required"),
   body("firstName").notEmpty().withMessage("First Name is required"),
   body("lastName").notEmpty().withMessage("Last Name is required"),
   body("nin")
@@ -15,4 +14,9 @@ export const signupValidationRules = [
   body("password")
     .isLength({ min: 6 })
     .withMessage("Password must be at least 6 characters long"),
+];
+
+export const loginValidationRules = [
+  body("email").notEmpty().withMessage("Email is required"),
+  body("password").notEmpty().withMessage("Password is required"),
 ];
