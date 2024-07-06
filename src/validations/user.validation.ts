@@ -17,6 +17,10 @@ export const signupValidationRules = [
 ];
 
 export const loginValidationRules = [
-  body("email").notEmpty().withMessage("Email is required"),
+  body("email")
+    .isEmail()
+    .withMessage("Email is invalid")
+    .notEmpty()
+    .withMessage("Email is required"),
   body("password").notEmpty().withMessage("Password is required"),
 ];
