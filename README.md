@@ -89,8 +89,11 @@ Ensure you have the following installed on your local machine:
             LENDQR_API_KEY=
 
     You would be required to sign up to the Lendsqr Adjutor API service in order to get the API key labeled as LENDQR_API_KEY
+
     TOKEN_SECRET is the secret key used for jwt Token Authentication
+
     PORT is the listening port on the server
+
     DB_HOSTNAME,DB_PORT,DB_USERNAME,DB_PASSWORD,DB_NAME can be derived from your MySql setup
 
 2.  Start DB Migrations
