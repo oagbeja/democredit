@@ -33,3 +33,24 @@
 2024-07-06T21:06:35.334Z [[31merror[39m]: User not found
 2024-07-06T21:07:35.500Z [[31merror[39m]: User not found
 2024-07-06T21:10:01.308Z [[31merror[39m]: User not found
+2024-07-06T21:11:01.331Z [[31merror[39m]: User already exists
+2024-07-08T11:17:12.374Z [[31merror[39m]: User not found
+2024-07-08T11:18:00.583Z [[31merror[39m]: User already exists
+2024-07-08T11:47:10.760Z [[31merror[39m]: Cannot destructure property 'uuid' of 'result' as it is undefined.
+2024-07-08T11:47:41.955Z [[31merror[39m]: User already exists
+2024-07-08T11:47:56.701Z [[31merror[39m]: select `uuid,amount` from `wallets` where `id` = 1 limit 1 - ER_BAD_FIELD_ERROR: Unknown column 'uuid,amount' in 'field list'
+2024-07-08T11:48:26.933Z [[31merror[39m]: select `uuid,amount` from `wallets` where `id` = 2 limit 1 - ER_BAD_FIELD_ERROR: Unknown column 'uuid,amount' in 'field list'
+2024-07-08T12:03:38.939Z [[31merror[39m]: User already exists
+2024-07-08T12:34:15.430Z [[31merror[39m]: invalid token
+2024-07-08T12:37:44.247Z [[31merror[39m]: Invalid token
+2024-07-08T12:37:47.199Z [[31merror[39m]: Invalid token
+2024-07-08T12:38:57.200Z [[31merror[39m]: Invalid token
+2024-07-08T12:39:56.947Z [[31merror[39m]: invalid token
+2024-07-08T12:39:59.788Z [[31merror[39m]: invalid token
+2024-07-08T12:40:01.963Z [[31merror[39m]: invalid token
+2024-07-08T14:03:18.898Z [[31merror[39m]: Undefined binding(s) detected when compiling FIRST. Undefined column(s): [user_id] query: select `amount` from `wallets` where `user_id` = ? limit ?
+2024-07-08T14:38:48.531Z [[31merror[39m]: user does not exist
+2024-07-08T14:39:34.685Z [[31merror[39m]: Not applicable. Try using funding my account module
+2024-07-08T14:41:07.670Z [[31merror[39m]: Insufficient amount. Unable to transfer funds
+2024-07-08T14:41:39.714Z [[31merror[39m]: Insufficient amount. Unable to transfer funds
+2024-07-08T14:47:27.423Z [[31merror[39m]: Insufficient amount to withdraw

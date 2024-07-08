@@ -2,13 +2,8 @@ import "dotenv/config";
 
 import jwt from "jsonwebtoken";
 import logger from "./logger";
-
-interface User {
-  email: string;
-  firstName: string;
-  lastName: string;
-  id: string;
-}
+import UserService from "../services/user.service";
+import { User } from "./interfaces";
 
 export const signToken = (user: User) => {
   try {
@@ -19,9 +14,23 @@ export const signToken = (user: User) => {
   }
 };
 
-export const verifyToken = (token: string) => {
+export const verifyToken = async (token: string) => {
   try {
-    return jwt.verify(token, process.env.TOKEN_SECRET as string);
+    const splitToken = token.split(" ");
+    if (
+      String(splitToken?.[0]).trim() === "Bearer" &&
+      typeof splitToken?.[1] === "string"
+    ) {
+      let decodedObject: any = jwt.verify(
+        splitToken[1],
+        process.env.TOKEN_SECRET as string
+      );
+      const userService = new UserService();
+      const userId = await userService.getUserId(decodedObject);
+      if (!userId) throw "Invalid user";
+      return { ...decodedObject, userId };
+    }
+    throw "Invalid token";
   } catch (err) {
     logger.error(err);
     throw err;

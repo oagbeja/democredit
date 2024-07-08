@@ -8,7 +8,7 @@ export default class UserController {
   async signupUser(req: Request, res: Response) {
     try {
       let payload = await userService.signupUser(req.body);
-      presentMessage(res, 200, payload, "User successfully signed up");
+      presentMessage(res, 201, payload, "User successfully signed up");
     } catch (e) {
       presentMessage(res, 400, undefined, e.message);
     }

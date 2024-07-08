@@ -8,11 +8,21 @@ const presentMessage = (
   message?: string | []
 ) => {
   let statusFlag = String(statusCode).indexOf("2") === 0;
+  //sometimes change the default status code
+  if (typeof message === "string") {
+    let splitMessage = message.split("****");
+    const statusCodePattern = /^[1-5][0-9]{2}$/;
+    if (statusCodePattern.test(splitMessage[0])) {
+      statusCode = parseInt(splitMessage[0]);
+      message = splitMessage[1] ?? "";
+    }
+  }
+
   res.status(statusCode).json({
-    payload: statusFlag ? payload : undefined,
+    data: statusFlag ? payload : undefined,
     errors: !statusFlag ? payload : undefined,
     message: message ?? null,
-    status: statusFlag,
+    status: statusFlag ? "success" : "error",
   });
   return;
 };
