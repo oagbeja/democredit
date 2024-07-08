@@ -18,6 +18,7 @@ This application demonstrates how to create,fund a wallet. It also allows transf
   - [Installation](#installation)
   - [Configuration](#configuration)
   - [Usage](#usage)
+  - [Endpoints](#endpoints)
   - [License](#license)
 
 ## ER Diagram
@@ -120,6 +121,49 @@ Ensure you have the following installed on your local machine:
     npm run build
 
     ```
+
+## Endpoints
+
+### 1. /api/auth/signup
+
+- **Method:** POST
+- **Description:** User register into the platform.
+- **Request Body:**
+  - `firstName`: String, required
+  - `lastName`: String, required
+  - `nin`: Integer, required
+  - `email`: String, required
+  - `password`: String, required
+
+### 2. /api/auth/login
+
+- **Method:** POST
+- **Description:** User logs in.
+- **Request Body:**
+  - `email`: String, required
+  - `password`: String, required
+
+### 3. /api/fund/my-account
+
+- **Method:** POST
+- **Description:** User funds his account
+- **Request Body:**
+  - `amount`: Double, required, greater than zero
+
+### 4. /api/fund/another-account
+
+- **Method:** POST
+- **Description:** User transfer to another's account
+- **Request Body:**
+  - `email`: String, required
+  - `amount`: Double, required, greater than zero
+
+### 5. /api/fund/withdraw
+
+- **Method:** POST
+- **Description:** User withdraws from the wallet.
+- **Request Body:**
+  - `amount`: Double, required, greater than zero
 
 ## License
 
