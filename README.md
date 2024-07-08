@@ -22,9 +22,9 @@ This application demonstrates how to create,fund a wallet. It also allows transf
 
 ## ER Diagram
 
-Include an image or a link to your ER diagram here.
+Click on the link below to learn more about the ER Diagram
 
-![ER Diagram](path/to/your/ER-diagram.png)
+[ER Diagram](https://dbdesigner.page.link/DChBiuTkayk3PpdL7)
 
 ## Prerequisites
 
@@ -97,6 +97,7 @@ Ensure you have the following installed on your local machine:
     DB_HOSTNAME,DB_PORT,DB_USERNAME,DB_PASSWORD,DB_NAME can be derived from your MySql setup
 
 2.  Start DB Migrations
+
     Run
 
     ```sh
