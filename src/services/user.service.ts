@@ -114,7 +114,7 @@ export default class UserService {
 
   async isBlacklisted(email: string) {
     try {
-      let url = `https://adjutor.lendsqr.com/verification/karma/$${email}`;
+      let url = `https://adjutor.lendsqr.com/verification/karma/${email}`;
       const headers = {
         Authorization: `Bearer ${process.env.LENDQR_API_KEY}`,
         "Content-Type": "application/json",
