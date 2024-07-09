@@ -143,3 +143,11 @@
 2024-07-09T20:11:39.999Z [[31merror[39m]: 401****User already exists
 2024-07-09T20:11:40.218Z [[31merror[39m]: Invalid password
 2024-07-09T20:11:40.219Z [[31merror[39m]: User not found
+2024-07-09T20:13:44.779Z [[31merror[39m]: User with invalid initial amount
+2024-07-09T20:13:44.786Z [[31merror[39m]: Not applicable. Try using fund my account module
+2024-07-09T20:13:44.788Z [[31merror[39m]: user does not exist
+2024-07-09T20:13:44.791Z [[31merror[39m]: Insufficient amount to withdraw
+2024-07-09T20:13:45.112Z [[31merror[39m]: 401****Sorry, you are Karma blacklisted
+2024-07-09T20:13:45.119Z [[31merror[39m]: 401****User already exists
+2024-07-09T20:13:45.339Z [[31merror[39m]: Invalid password
+2024-07-09T20:13:45.341Z [[31merror[39m]: User not found
