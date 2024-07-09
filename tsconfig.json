@@ -53,7 +53,8 @@
   "include": [
     "src/**/*",
     "./typings/nodemailer/nodemailer.d.ts",
-    "./typings/nodemailer-express-handlebars/nodemailer-express-handlebars.d.ts"
+    "./typings/nodemailer-express-handlebars/nodemailer-express-handlebars.d.ts",
+    "./migrations"
   ],
   "exclude": [
     "**/node_modules",
