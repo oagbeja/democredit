@@ -23,6 +23,14 @@ export default class FundService {
         await trx("wallets").where({ user_id: userId }).update({
           amount,
         });
+
+        await trx("transactions").insert({
+          payer_id: userId,
+          payee_id: userId,
+          amount: addedAmount,
+          settled: true,
+          description: "Fund My Account",
+        });
       });
 
       return { amount };
@@ -78,8 +86,17 @@ export default class FundService {
         await trx("wallets").where({ user_id: userId }).update({
           amount,
         });
+
         await trx("wallets").where({ user_id: otherUserId }).update({
           amount: otherUserAmount,
+        });
+
+        await trx("transactions").insert({
+          payer_id: userId,
+          payee_id: otherUserId,
+          amount: addedAmount,
+          description: "Fund Another User's Account",
+          settled: true,
         });
       });
 
@@ -110,6 +127,12 @@ export default class FundService {
       await db.transaction(async (trx) => {
         await trx("wallets").where({ user_id: userId }).update({
           amount,
+        });
+
+        await trx("transactions").insert({
+          payer_id: userId,
+          amount: subtractedAmount,
+          description: "Withdraw From My Account",
         });
       });
 
