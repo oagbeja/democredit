@@ -55,9 +55,6 @@ export default class UserService {
         };
       });
 
-      // create a new wallet
-
-      //Add to db and send jwt token
       return userObject;
     } catch (e) {
       logger.error(e);
@@ -74,7 +71,6 @@ export default class UserService {
         throw "User not found";
       }
 
-      console.log(result);
       // return;
       const isMatched = await comparePasswords(password, result.password);
       if (!isMatched) throw "Invalid password";
