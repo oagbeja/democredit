@@ -165,6 +165,10 @@ Ensure you have the following installed on your local machine:
 - **Request Body:**
   - `amount`: Double, required, greater than zero
 
+## Note: Endpoint 3 - 5 needs a bearer token (derived from user authentication ) added to the Authorization header .
+
+        "Authorization": "Bearer echaiPPPSKKKLKLkklkslkds...."
+
 ## License
 
 This project is licensed under the MIT [LICENSE](./LICENSE) - see the LICENSE file for details.
